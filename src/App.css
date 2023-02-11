@@ -1,0 +1,153 @@
+/* global color  */
+
+:root {
+  --primary: #a6ffff;
+  --secondary: #009985;
+  --black: rgb(32, 32, 32);
+  --bg_color: #0d2436;
+  --font_color: #ffffff;
+  --font_color_hover: #cccccc;
+  --card_bg: silver;
+  --black2: black;
+}
+
+/* global button  */
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg_color);
+  color: var(--font_color);
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.cards {
+  padding: 25px;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: auto;
+  align-items: center;
+
+  grid-gap: 18px;
+}
+.card {
+  height: 400px;
+  width: 250px;
+  margin: 15px;
+  /* padding: 20px; */
+  border: 2px solid #e7e7e7;
+
+  border-radius: 4px;
+  /* margin-bottom: 5px; */
+
+  align-items: center;
+}
+.cardPortal {
+  height: 300px;
+  width: 200px;
+  margin: 15px;
+  /* padding: 20px; */
+  border: 2px solid #e7e7e7;
+
+  border-radius: 4px;
+  /* margin-bottom: 5px; */
+
+  align-items: center;
+}
+.cardImage {
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 60%;
+}
+.cardTitle {
+  /* margin-top: 15px; */
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 40px;
+  min-width: 100px;
+  overflow-wrap: break-word;
+  /* font-size: medium; */
+}
+.cardT {
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 40px;
+  min-width: 100px;
+}
+.cardButton {
+  padding: 10px;
+  height: 10%;
+  text-align: center;
+}
+.buttonOverlay {
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.button {
+  min-height: 40px;
+  min-width: 100px;
+  border-radius: 5%;
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: var(--secondary);
+  border: none;
+  text-align: center;
+}
+.button.large {
+  min-width: 60px !important;
+  min-width: 120px !important;
+}
+.button:hover {
+  cursor: pointer;
+  border-top: 4px solid var(--primary);
+  overflow: hidden;
+}
+.OVERLAY_STYLES {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+  position: "fixed";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: "rgba(0, 0, 0, .7)";
+  z-index: 1000;
+}
+.MODAL_STYLES {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+  position: "fixed";
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: auto;
+  align-items: center;
+
+  top: "50%";
+  left: "50%";
+  transform: "translate(-50%, -50%)";
+  background-color: "#FFF";
+  grid-gap: 18px;
+  padding: "50px";
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+}
